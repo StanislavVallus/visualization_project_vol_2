@@ -16,7 +16,7 @@ const tooltip = d3.select('#tooltip');
 
 // problem with paths - editing (stanislav)
 // const dataPath = '../data/owid-energy-data.csv';
-const dataPath = 'data/owid_energy.csv';
+const dataPath = 'data/owid-energy-data.csv';
 let dataStore = null;
 let mapReady = null;
 let playTimer = null;
