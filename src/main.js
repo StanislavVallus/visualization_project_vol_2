@@ -14,7 +14,9 @@ const state = {
 const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 const tooltip = d3.select('#tooltip');
 
-const dataPath = '../data/owid-energy-data.csv';
+// problem with paths - editing (stanislav)
+// const dataPath = '../data/owid-energy-data.csv';
+const dataPath = 'data/owid_energy.csv';
 let dataStore = null;
 let mapReady = null;
 let playTimer = null;
