@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GDP & Electricity: Exploring Energy-Economy Relationships</title>
+  <link rel="stylesheet" href="src/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">Global Energy-Economy Dashboard</p>
+      <h1>GDP & Electricity: Exploring Energy-Economy Relationships</h1>
+    </div>
+    <div class="legend-block" id="country-legend"></div>
+  </header>
+
+  <main>
+    <section class="top-panel">
+      <div class="controls">
+        <div class="control-group">
+          <label for="year-slider">Year <span id="year-label">2020</span></label>
+          <div class="year-row">
+            <input type="range" id="year-slider" min="1990" max="2020" step="1" value="2020" />
+            <button id="play-button" class="ghost-btn">Play</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label>Map Metric</label>
+          <div class="metric-toggle" id="map-metric-toggle">
+            <button data-metric="intensity" class="active">Electricity Intensity</button>
+            <button data-metric="demandPerCapita">Demand per Capita</button>
+            <button data-metric="gdpPerCapita">GDP per Capita</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <label>Selection</label>
+          <button id="clear-selection" class="ghost-btn full">Clear selected countries</button>
+          <div id="selection-legend" class="legend-block stack"></div>
+        </div>
+      </div>
+      <div class="map-wrapper">
+        <div class="map-title">
+          <div>
+            <h2 id="map-title-text">Where is electricity decoupling from GDP?</h2>
+            <p class="subtitle">Click to select countries. Hover for details.</p>
+          </div>
+          <div id="map-legend" class="map-legend"></div>
+        </div>
+        <div id="map"></div>
+      </div>
+    </section>
+
+    <section class="bottom-panel">
+      <div class="card" id="line-chart-card">
+        <div class="card-header">
+          <h3>Growth Paths: GDP vs Electricity Demand</h3>
+          <p class="subtitle">Compare scale or indexed growth to spot decoupling.</p>
+          <div class="line-mode-inline toggle" id="line-mode-toggle">
+            <button data-mode="absolute" class="active">Absolute</button>
+            <button data-mode="indexed">Indexed</button>
+          </div>
+        </div>
+        <div id="line-chart"></div>
+      </div>
+      <div class="card" id="radar-card">
+        <div class="card-header">
+          <h3>Energy Profile Radar</h3>
+          <p class="subtitle">Efficiency, cleanliness, self-reliance, and usage.</p>
+        </div>
+        <div id="radar-chart"></div>
+      </div>
+      <div class="card" id="bump-card">
+        <div class="card-header">
+          <h3>Rank Shifts in Electricity Demand</h3>
+          <p class="subtitle">Who climbed or fell among selected peers?</p>
+        </div>
+        <div id="bump-chart"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="tooltip" class="tooltip" style="opacity:0"></div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
