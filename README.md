@@ -1,5 +1,7 @@
 # GDP & Electricity Dashboard
 
+Available at https://stanislavvallus.github.io/visualization_project_vol_2/
+
 Interactive single-page dashboard (Vanilla JS + D3) exploring electricity demand vs economic growth using `data/owid-energy-data.csv`.
 
 ## Data
@@ -27,4 +29,4 @@ Interactive single-page dashboard (Vanilla JS + D3) exploring electricity demand
 ```bash
 npx http-server .
 ```
-Open http://localhost:8080/ in a modern browser. Entry point is the root `index.html` (assets in `src/`).
+
