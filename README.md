@@ -1,4 +1,4 @@
-# GDP & Electricity Dashboard
+# GDP & Electricity Dashboard (School project for visualization course)
 
 Available at https://stanislavvallus.github.io/visualization_project_vol_2/
 
